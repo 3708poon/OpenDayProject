@@ -1,12 +1,12 @@
 basic.forever(function () {
     if (pins.analogReadPin(AnalogPin.P2) < 300) {
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, 360)
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, 360)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 360)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S1, 360)
     } else {
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S0, 0)
-        wuKong.setServoAngle(wuKong.ServoTypeList._180, wuKong.ServoList.S1, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S0, 0)
+        wuKong.setServoAngle(wuKong.ServoTypeList._360, wuKong.ServoList.S1, 0)
     }
-    if (input.temperature() > 30) {
+    if (input.temperature() > 10) {
         wuKong.setMotorSpeed(wuKong.MotorList.M2, 100)
     } else {
         wuKong.setMotorSpeed(wuKong.MotorList.M2, 0)
